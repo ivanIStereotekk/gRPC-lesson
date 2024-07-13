@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package calc;
+
+service Calc {
+    rpc Add (AddRequest) returns (AddResponse);
+}
+
+message AddRequest{
+    int32 val_one = 1;
+    int32 val_two = 2;
+}
+
+message AddResponse{
+    int32 result = 1;
+}
